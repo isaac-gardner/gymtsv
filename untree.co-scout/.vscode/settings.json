@@ -3,12 +3,12 @@
         {
             "format": "expanded",
             "extensionName": ".css",
-            "savePath": "/css"
+            "savePath": "/wordpress/wp-content/themes/scout/css"
         },
         {
             "extensionName": ".min.css",
             "format": "compressed",
-            "savePath": "/dist/css"
+            "savePath": "/wordpress/wp-content/themes/scout/css"
         }
     ],
     "liveSassCompile.settings.excludeList": [
