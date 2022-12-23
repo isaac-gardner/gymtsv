@@ -20,7 +20,7 @@ services:
   wordpress:
     image: wordpress:latest
     volumes:
-      - wp_data:/var/www/html
+      - "/c/src/gymtsv/wordpress:/var/www/html"
     ports:
       - 80:80
     restart: always
@@ -31,4 +31,3 @@ services:
       - WORDPRESS_DB_NAME=wordpress
 volumes:
   db_data:
-  wp_data:
