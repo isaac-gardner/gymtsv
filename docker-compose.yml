@@ -20,7 +20,8 @@ services:
   wordpress:
     image: wordpress:latest
     volumes:
-      - "/c/src/gymtsv/wordpress:/var/www/html"
+      - "./wordpress:/var/www/html"
+      - "./wordpress.ini:/usr/local/etc/php/conf.d/wordpress.ini"
     ports:
       - 80:80
     restart: always
