@@ -6,6 +6,17 @@ function scout_theme_support() {
 
 add_action('after_setup_theme', 'scout_theme_support');
 
+function scout_menus() {
+    $locations = array(
+        'primary' => "Head Menu Items"
+    );
+
+    register_nav_menus($locations);
+}
+
+add_action('init', 'scout_menus');
+
+
 function scout_register_styles(){
     $version = wp_get_theme()->get( 'Version' );
     wp_enqueue_style('scout-bootstrap', get_template_directory_uri() . "/assets/css/bootstrap.min.css", array(), '1.0', 'all');

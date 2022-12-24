@@ -58,9 +58,21 @@
     <div class="sticky-nav js-sticky-header">
 
       <div class="container position-relative">
+
+
         <div class="site-navigation text-left dark">
           <a href="index.html" class="logo menu-absolute m-0">Gymnastics Townsville<span class="text-primary">.</span></a>
 
+          <?php 
+            wp_nav_menu(
+                array(
+                    'menu' => 'primary',
+                    'container' => '',
+                    'theme-location' => 'primary',
+                    'items_wrap' => '<ul class="js-clone-nav pl-0 d-none d-lg-inline-block site-menu ml-md-3">%3$s</ul>'
+                )
+            );
+          ?>
           <ul class="js-clone-nav pl-0 d-none d-lg-inline-block site-menu ml-md-3">
             <li class="active"><a href="index.html">Home</a></li>
             <li><a href="features.html">Features</a></li>
